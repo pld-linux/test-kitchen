@@ -44,6 +44,7 @@ Requires:	ruby-rubygems > 1.3.1
 Requires:	ruby-safe_yaml < 0.10
 Requires:	ruby-safe_yaml >= 0.9.5
 Requires:	ruby-thor
+Requires:	vagrant >= 1.1.0
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
