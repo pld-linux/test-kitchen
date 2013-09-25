@@ -59,6 +59,8 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{ruby_vendorlibdir},%{_bindir}}
 cp -a lib/* $RPM_BUILD_ROOT%{ruby_vendorlibdir}
 cp -a bin/* $RPM_BUILD_ROOT%{_bindir}
+# XXX
+cp -a templates $RPM_BUILD_ROOT%{ruby_vendordir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -72,3 +74,6 @@ rm -rf $RPM_BUILD_ROOT
 # FIXME should be in subdir of this package, or unvendored
 %dir %{ruby_vendorlibdir}/vendor
 %{ruby_vendorlibdir}/vendor/hash_recursive_merge.rb
+
+# XXX proper subdir
+%{ruby_vendordir}/templates
